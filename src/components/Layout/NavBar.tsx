@@ -3,6 +3,8 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { SignedIn, SignedOut, SignInButton, UserButton } from '@clerk/nextjs'
+import Image from "next/image";
+import logo from "@/assets/logo.png";
 
 
 function NavBar() {
@@ -33,9 +35,10 @@ function NavBar() {
           {/* Logo */}
         <Link href="/">
         <div className="flex items-center space-x-3 group">
-            <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-700 via-green-400 to-indigo-400 inline-block text-transparent bg-clip-text">Codex_AI</span>
+          <Image src={logo} height={40} width={40} alt="logo" />
+        <span className="text-xl sm:text-2xl font-bold bg-gradient-to-r from-blue-700 via-green-400 to-indigo-400 inline-block text-transparent bg-clip-text">Codex_AI</span>
           </div>
-        </Link>
+      </Link>
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-10">
           {navLinks.map((link) => (

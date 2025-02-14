@@ -1,6 +1,9 @@
 import React from 'react'
 import Link from 'next/link'
 import { ImGithub } from "react-icons/im";
+
+
+
 function Hero() {
   return (
 <div className="bg-[#0A0A0A] overflow-x-hidden">
@@ -43,6 +46,7 @@ function Hero() {
           {/* CTA Section - Better mobile layout */}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-reveal [animation-delay:0.8s]">
             {/* Primary Button - Full width on mobile */}
+            
             <Link href="/main" className="group relative w-full sm:w-auto px-6 py-3 min-w-[160px]">
               <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-lg" />
               <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-lg blur-lg group-hover:opacity-60 transition-opacity duration-500" />

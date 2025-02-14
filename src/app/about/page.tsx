@@ -15,7 +15,7 @@ function AboutPage() {
         <p className="text-gray-700">
         CodexAI is an innovative AI-powered UI and code generation tool designed to accelerate frontend and full-stack development. Whether you are a developer, designer, or entrepreneur, CodexAI simplifies the process of creating modern, responsive, and scalable user interfaces with AI-driven intelligence.
 
-With seamless integration of React, Tailwind CSS, and Next.js, CodexAI helps you generate production-ready UI components and boilerplate code effortlessly, allowing you to focus on building great experiences rather than writing repetitive code..
+        With seamless integration of Mordern technologies, CodexAI helps you generate production-ready UI components and boilerplate code effortlessly, allowing you to focus on building great experiences rather than writing repetitive code..
         </p>
       </div>
     </div>

@@ -8,7 +8,7 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         const model = genAI.getGenerativeModel({ model: "gemini-pro" });
 
         const data = await req.json();
-        const prompt = `${data.body}. Write JSX code only with classnames and html tags necessary. Return Only output code.`;
+        const prompt = `${data.body}. Write JSX code only with classnames, simple tailwindcss styling classes and html tags necessary. Return Only output code.`;
 
         const result = await model.generateContent(prompt);
         const response = result.response;
@@ -20,3 +20,5 @@ export async function POST(req: NextRequest): Promise<NextResponse> {
         return NextResponse.json({ error: "Internal Server Error" }, { status: 500 });
     }
 }
+
+
