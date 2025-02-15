@@ -4,7 +4,7 @@ import Link from "next/link";
 import { IoReturnDownBack } from "react-icons/io5";
 import { SignIn } from '@clerk/nextjs'
 import Image from "next/image";
-
+import { logo } from "@/assets";
 
 export const metadata: Metadata = {
   title: "Login",
@@ -24,10 +24,10 @@ export default function SignInPage() {
           Back
         </>
       </Link>
-      <div className="mx-auto flex w-full flex-col justify-center space-y-6 sm:w-[350px]">
-        <div className="flex flex-col space-y-2 text-center">
+      <div className="flex w-full flex-col justify-center items-center mx-auto space-y-4 sm:w-[350px]">
+        <div className="flex flex-col space-y-2 justify-center text-center mx-auto">
           <div  className="mx-auto flex items-center justify-center" >
-          <Image src="" height={40} width={40} alt="logo"/>
+          <Image src={logo} height={40} width={40} alt="logo"/>
           </div>
           <h1 className="text-2xl font-semibold tracking-tight">
             Welcome back

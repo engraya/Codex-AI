@@ -1,7 +1,7 @@
 import React from 'react'
 import Link from 'next/link'
 import { ImGithub } from "react-icons/im";
-
+import { SignedIn, SignedOut } from '@clerk/nextjs'
 
 
 function Hero() {
@@ -46,17 +46,31 @@ function Hero() {
           {/* CTA Section - Better mobile layout */}
           <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 animate-reveal [animation-delay:0.8s]">
             {/* Primary Button - Full width on mobile */}
+            <SignedIn>
+              <Link href="/main" className="group relative w-full sm:w-auto px-6 py-3 min-w-[160px]">
+                <div className="absolute inset-0 bg-gradient-to-r animate-bounce from-violet-600 to-cyan-600 rounded-lg" />
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-lg blur-lg group-hover:opacity-60 transition-opacity duration-500" />
+                <div className="relative flex items-center justify-center gap-2">
+                  <span className="text-white font-medium">Explore</span>
+                  <svg className="w-5 h-5 text-white transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
+              </Link>
+            </SignedIn>
             
-            <Link href="/main" className="group relative w-full sm:w-auto px-6 py-3 min-w-[160px]">
-              <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-lg" />
-              <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-lg blur-lg group-hover:opacity-60 transition-opacity duration-500" />
-              <div className="relative flex items-center justify-center gap-2">
-                <span className="text-white font-medium">Explore</span>
-                <svg className="w-5 h-5 text-white transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
-                </svg>
-              </div>
-            </Link>
+            <SignedOut>
+            <Link href="/sign-in" className="group relative w-full sm:w-auto px-6 py-3 min-w-[160px]">
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-lg" />
+                <div className="absolute inset-0 bg-gradient-to-r from-violet-600 to-cyan-600 rounded-lg blur-lg group-hover:opacity-60 transition-opacity duration-500" />
+                <div className="relative flex items-center justify-center gap-2">
+                  <span className="text-white font-medium">Get Started</span>
+                  <svg className="w-5 h-5 text-white transform group-hover:translate-x-1 transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 7l5 5m0 0l-5 5m5-5H6" />
+                  </svg>
+                </div>
+              </Link>
+            </SignedOut>
             {/* Secondary Button - Full width on mobile */}
             <Link href="https://github.com/engraya/Codex-AI" target='_blank'>
               <button className="sm:w-auto px-6 py-3 rounded-lg border border-white/10 bg-white/5 backdrop-blur-lg text-white/70 hover:bg-white/10 hover:text-white transition-all">

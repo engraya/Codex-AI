@@ -17,7 +17,7 @@ function NavBar() {
 
 
   return (
-    <div className="relative overflow-hidden z-10">
+    <div className="relative overflow-hidden z-10 lg:px-8">
       {/* Animated Background */}
       <div className="absolute inset-0 bg-gradient-to-r from-violet-950 via-blue-900 to-cyan-950 backdrop-blur-md" />
 
@@ -101,14 +101,11 @@ function NavBar() {
           <>
           <div className="px-2 pt-2 pb-3 space-y-1 bg-blue-900/50 backdrop-blur-sm rounded-lg border border-blue-500/10">
             {navLinks.map((link) => (
-              <a href={link.href} key={link.name} className="block px-3 py-2 rounded-md text-base font-medium text-blue-100 hover:text-white hover:bg-blue-800/50">
+              <a href={link.href} key={link.name} className="block px-3 py-2 rounded-md text-base font-bold text-blue-100 hover:text-white hover:bg-blue-800/50">
                 {link.name}
               </a>
             ))}
           </div>
-          <SignedIn>
-              <UserButton />
-            </SignedIn>
           <div className="px-3 py-2">
           <SignedOut>
           <div className="w-full relative group">
